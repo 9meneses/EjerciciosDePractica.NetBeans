@@ -30,7 +30,7 @@ public class JavaApplication2 {
     }
     
     public void ejemplo2String(){
-    String cadena2= "ACASO HUBO BUHOS ACA";
+    String cadena2= "OSO";
     cadena2 = cadena2.replace(" ", ""); //tenemos la cadena 2 sin espacios, en la que posteriormente tenemos que crear otra cadena
                                         // igual que la cadena 2 pero dada la vuelta, para poder hacer la comparación
                                         
@@ -44,20 +44,44 @@ public class JavaApplication2 {
     else{
         System.out.println(false);
     }
+    }
+    
+    public boolean isograma (String palabra){
+        for (int i=0; i<palabra.length(); i++){
+            for (int j=i+1; j<palabra.length(); j++){ //sumo una poscion respecto de la i ya que me compararia la misma letra sobre 
+                                                      //la misma letra 
+                if (palabra.charAt(i) == (palabra.charAt(j))){ //compara la poscion de i con la posicion de la j  
+                    return false;
+                
+                }
+            
+            }
+        }
+        return true;
+    
+    }
+    
+   
+             
+            
+        
+        
+    
     
 
     
   
     
     
-    }
+    
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
        JavaApplication2 ejercicio1 = new JavaApplication2();
-        ejercicio1.ejemplo2String();
+       String palabra = "oso"; //declaro la palabra para comprobar el resultado del ejercicio
+       System.out.println(ejercicio1.isograma(palabra));
         
     }
     
